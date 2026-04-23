@@ -1,94 +1,109 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Jean-Marie Vient
-    - name: Location
-      value: Brest, Bretagne, France
-    - name: Languages
-      value: French (native), English (professional)
+cv:
+  name: Jean-Marie Vient
+  location: Brest, Bretagne, France
+  email: jean-marie.vient@shom.fr
+  website: https://jvient.github.io
+  social_networks:
+    - network: LinkedIn
+      username: jeanmarievient
+    - network: GitHub
+      username: Jvient
+    - network: ORCID
+      username: 0000-0002-4095-3274
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD in Ocean Data Science
-      institution: Université de Bretagne Occidentale — IUEM / IMT Atlantic / SHOM
-      year: 2019 - 2022
-      description:
-        - Thesis "Assimilation of the spatio-temporal dynamics of turbidity through synergy between ocean colour satellite measurements and hydrodynamic simulations."
-        - Directed by Christophe Delacourt (IUEM) and Ronan Fablet (IMT Atlantic), supervised by Frédéric Jourdin (SHOM).
-        - Focus on deep learning, data assimilation, ocean colour remote sensing and hydrodynamic modeling.
-    - title: Engineering Degree — Geology and Environment
-      institution: UniLaSalle
-      year: 2014 - 2019
-      description:
-        - Specialization in energy resources, reservoir modeling, remote sensing and GIS.
-        - Core curriculum; petroleum geology, sedimentology, remote sensing, reservoir modeling, GIS, project management.
-        - Winner of the Simulia Regional User Meeting Academic Award (2018).
+  sections:
+    summary:
+      - PhD in AI & oceanographic data processing. Geoscience engineer specialized in the application of machine learning and data assimilation to ocean remote sensing and hydrodynamic modeling.
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Data Scientist for Oceanographic Analysis
-      institution: SHOM — Service Hydrographique et Océanographique de la Marine
-      year: 2025 - now
-      description:
-        - Innovation Lab Agent at SHOM, collaborating with operational departments to design and deliver projects combining oceanography and artificial intelligence.
-        - Development of oceanographic products, use cases and proof-of-concepts based on the exploitation of physical oceanography data and in-situ / satellite observations.
-        - Design of AI-driven methods for the analysis, reconstruction and forecasting of ocean variables (turbidity, surface dynamics, water masses).
-        - Scientific and technical expertise on AI applied to oceanography, including collaborations with academic partners (IMT Atlantic, IUEM, Ifremer).
-        - Contribution to SHOM's scientific and operational outreach in AI-driven oceanography.
+    experience:
+      - company: SHOM — Service Hydrographique et Océanographique de la Marine
+        position: Data Scientist for Oceanographic Analysis
+        location: Brest, France
+        start_date: 2025-04
+        end_date: present
+        highlights:
+          - Innovation Lab Agent at SHOM, collaborating with operational departments to design and deliver projects combining oceanography and artificial intelligence.
+          - Development of oceanographic products, use cases and proof-of-concepts based on the exploitation of physical oceanography data and in-situ / satellite observations.
+          - Design of AI-driven methods for the analysis, reconstruction and forecasting of ocean variables (turbidity, surface dynamics, water masses), in support of SHOM's hydrographic and oceanographic missions.
+          - Scientific and technical expertise on AI applied to oceanography, including collaborations with academic partners (IMT Atlantic, IUEM, Ifremer).
+          - Contribution to SHOM's scientific and operational outreach in AI-driven oceanography.
 
-    - title: Data & AI Architect Engineer
-      institution: SHOM — Service Hydrographique et Océanographique de la Marine
-      year: 2023 - 2025
-      description:
-        - Support to business teams in the design and deployment of operational and exploratory Data / AI processes.
-        - Implementation of technical architectures and DevOps/MLOps pipelines on bare-metal servers (Kubernetes HA, Spark, MinIO, GPU).
-        - Contribution to SHOM's IT system modernization and drafting of technical specifications.
+      - company: SHOM — Service Hydrographique et Océanographique de la Marine
+        position: Data & AI Architect Engineer
+        location: Brest, France
+        start_date: 2023-02
+        end_date: 2025-04
+        highlights:
+          - Support to business teams in the design and deployment of operational and exploratory Data / AI processes.
+          - Implementation of technical architectures and DevOps/MLOps pipelines on bare-metal servers (Kubernetes HA, Spark, MinIO, GPU infrastructure).
+          - Contribution to SHOM's IT system modernization and drafting of technical specifications.
 
-    - title: PhD Student in Ocean Data Science
-      institution: Université de Bretagne Occidentale — IUEM / IMT Atlantic / SHOM
-      year: 2019 - 2022
-      description:
-        - Development of deep learning architectures (end-to-end neural interpolation, data-driven assimilation) to reconstruct sea surface suspended sediment concentrations from partial satellite observations.
-        - Coupling of ocean colour remote sensing products with hydrodynamic-sedimentary model outputs (MARS3D) to improve spatio-temporal coverage of turbidity fields in coastal environments.
-        - Two first-author peer-reviewed articles in Remote Sensing (MDPI, 2021 & 2022).
+      - company: Université de Bretagne Occidentale — IUEM / IMT Atlantic / SHOM
+        position: PhD Student in Ocean Data Science
+        location: Brest, France
+        start_date: 2019-10
+        end_date: 2022-12
+        highlights:
+          - PhD thesis "Assimilation of the spatio-temporal dynamics of turbidity through synergy between ocean colour satellite measurements and hydrodynamic simulations".
+          - Development of deep learning architectures (end-to-end neural interpolation, data-driven assimilation) to reconstruct sea surface suspended sediment concentrations from partial satellite observations.
+          - Coupling of ocean colour remote sensing products with hydrodynamic-sedimentary model outputs (MARS3D) to improve the spatio-temporal coverage of turbidity fields in coastal environments.
+          - Two first-author peer-reviewed articles published in Remote Sensing (MDPI, 2021 & 2022).
+          - Thesis directed by Christophe Delacourt (IUEM) and Ronan Fablet (IMT Atlantic), supervised by Frédéric Jourdin (SHOM).
 
-    - title: Research Intern — End of studies internship
-      institution: SHOM
-      year: 2019
-      description:
-        - Learning methods for ocean transparency prediction, in partnership with IMT Atlantic.
-        - Processing of hydrosedimentary model outputs to benchmark algorithmic methods for water transparency prediction.
-        - Application of data assimilation methods to coastal turbidity data.
-        - Participation in the SHOM hydrographic vessel campaign MEPELS (at-sea expertise and sampling).
+      - company: SHOM
+        position: Research Intern — End of studies internship
+        location: Brest, France
+        start_date: 2019-01
+        end_date: 2019-07
+        highlights:
+          - Learning methods for ocean transparency prediction, in partnership with IMT Atlantic.
+          - Processing of hydrosedimentary model outputs to design and benchmark algorithmic methods for water transparency prediction.
+          - Application of data assimilation methods to coastal turbidity data.
+          - Participation in the SHOM hydrographic vessel campaign MEPELS (at-sea expertise and sampling).
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 2018
-      items:
-        - Simulia Regional User Meeting Academic Award (First prize) — Numerical simulation project on biomimicry, applied to coastal protection and submarine cable bioengineering.
+    education:
+      - institution: Université de Bretagne Occidentale (IUEM) — IMT Atlantic — SHOM
+        area: Ocean Data Science — AI applied to Oceanography
+        degree: PhD
+        location: Brest, France
+        start_date: 2019-10
+        end_date: 2022-12
+        highlights:
+          - Thesis defended in December 2022.
+          - Focus on deep learning, data assimilation, ocean colour remote sensing and hydrodynamic modeling.
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Ocean data science
-      items:
-        - Deep learning applied to ocean observations
-        - Data assimilation and variational methods
-        - Neural interpolation of partial satellite observations
-    - title: Ocean remote sensing
-      items:
-        - Ocean colour, turbidity and suspended sediments
-        - Coastal dynamics
-    - title: Hydrodynamic modeling
-      items:
-        - MARS3D and hydrosedimentary modeling
-        - Coupling of models and observations
+      - institution: UniLaSalle
+        area: Geology and Environment — Energy Resources
+        degree: Engineering Degree
+        location: France
+        start_date: 2014-09
+        end_date: 2019-06
+        highlights:
+          - Specialization in energy resources, reservoir modeling, remote sensing and GIS.
+          - Core curriculum — petroleum geology, sedimentology, remote sensing, reservoir modeling, GIS, project management.
+          - Winner of the Simulia Regional User Meeting Academic Award (2018).
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Artistic fencing, volunteering (Ordre de Malte)
+    skills:
+      - label: Programming
+        details: Python (PyTorch, TensorFlow, NumPy, Xarray, Pandas), Bash, SQL
+      - label: Machine Learning / AI
+        details: Deep learning, neural interpolation, data assimilation, variational methods, representation learning
+      - label: Oceanography & Remote Sensing
+        details: Ocean colour, turbidity / SPM, hydrodynamic-sedimentary modeling (MARS3D), satellite observations (MODIS, Sentinel)
+      - label: Data & MLOps
+        details: Kubernetes (HA), Rancher, Ansible, Spark, MinIO, Jupyter, GPU infrastructure
+      - label: Geosciences
+        details: GIS, reservoir modeling, sedimentology, remote sensing
+
+    languages:
+      - name: French
+        details: Native
+      - name: English
+        details: Professional working proficiency
+
+    awards:
+      - name: Simulia Regional User Meeting Academic Award (First prize)
+        location: France
+        date: 2018-10
+        highlights:
+          - Numerical simulation project on biomimicry (Torquigener albomaculosus nest), applied to coastal protection and submarine cable bioengineering.
