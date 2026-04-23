@@ -80,22 +80,45 @@ cv:
           - Winner of the Simulia Regional User Meeting Academic Award (2018).
 
     Skills:
-      - label: Programming
-        details: Python (PyTorch, TensorFlow, NumPy, Xarray, Pandas), Bash, SQL
-      - label: Machine Learning / AI
-        details: Deep learning, neural interpolation, data assimilation, variational methods, representation learning
-      - label: Oceanography & Remote Sensing
-        details: Ocean colour, turbidity / SPM, hydrodynamic-sedimentary modeling (MARS3D), satellite observations (MODIS, Sentinel)
-      - label: Data & MLOps
-        details: Kubernetes (HA), Rancher, Ansible, Spark, MinIO, Jupyter, GPU infrastructure
-      - label: Geosciences
-        details: GIS, reservoir modeling, sedimentology, remote sensing
+      - name: Programming
+        keywords:
+          - Python (PyTorch, TensorFlow, NumPy, Xarray, Pandas)
+          - Bash
+          - SQL
+      - name: Machine Learning / AI
+        keywords:
+          - Deep learning
+          - Neural interpolation
+          - Data assimilation
+          - Variational methods
+          - Representation learning
+      - name: Oceanography & Remote Sensing
+        keywords:
+          - Ocean colour
+          - Turbidity / SPM
+          - Hydrodynamic-sedimentary modeling (MARS3D)
+          - Satellite observations (MODIS, Sentinel)
+      - name: Data & MLOps
+        keywords:
+          - Kubernetes (HA)
+          - Rancher
+          - Ansible
+          - Spark
+          - MinIO
+          - Jupyter
+          - GPU infrastructure
+      - name: Geosciences
+        keywords:
+          - GIS
+          - Reservoir modeling
+          - Sedimentology
+          - Remote sensing
 
     Languages:
-      - label: French
-        details: Native
-      - label: English
-        details: Professional working proficiency
+      - language: French
+        fluency: Native
+      - language: English
+        fluency: Professional working proficiency
 
     Awards:
       - name: Simulia Regional User Meeting Academic Award
