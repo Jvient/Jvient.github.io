@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Jvient
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Jvient/OSSE_BoB-4DVarNet
+  - Jvient/NAIADE
+  - Jvient/4DVarNet_OSSE
+
