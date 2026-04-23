@@ -1,8 +1,10 @@
 cv:
   name: Jean-Marie Vient
+  label: PhD in AI & Oceanographic Data Processing — Geoscience Engineer
   location: Brest, Bretagne, France
   email: jean-marie.vient@shom.fr
   website: https://jvient.github.io
+  summary: PhD in AI & oceanographic data processing. Geoscience engineer specialized in the application of machine learning and data assimilation to ocean remote sensing and hydrodynamic modeling.
   social_networks:
     - network: LinkedIn
       username: jeanmarievient
@@ -12,10 +14,7 @@ cv:
       username: 0000-0002-4095-3274
 
   sections:
-    summary:
-      - PhD in AI & oceanographic data processing. Geoscience engineer specialized in the application of machine learning and data assimilation to ocean remote sensing and hydrodynamic modeling.
-
-    experience:
+    Experience:
       - company: SHOM — Service Hydrographique et Océanographique de la Marine
         position: Data Scientist for Oceanographic Analysis
         location: Brest, France
@@ -59,7 +58,7 @@ cv:
           - Processing of hydrosedimentary model outputs and application of data assimilation methods to coastal turbidity data.
           - Participation in the SHOM hydrographic vessel campaign MEPELS (at-sea expertise and sampling).
 
-    education:
+    Education:
       - institution: Université de Bretagne Occidentale (IUEM) — IMT Atlantic — SHOM
         area: Ocean Data Science — AI applied to Oceanography
         degree: PhD
@@ -80,7 +79,7 @@ cv:
           - Specialization in energy resources, reservoir modeling, remote sensing and GIS.
           - Winner of the Simulia Regional User Meeting Academic Award (2018).
 
-    skills:
+    Skills:
       - label: Programming
         details: Python (PyTorch, TensorFlow, NumPy, Xarray, Pandas), Bash, SQL
       - label: Machine Learning / AI
@@ -92,13 +91,13 @@ cv:
       - label: Geosciences
         details: GIS, reservoir modeling, sedimentology, remote sensing
 
-    languages:
+    Languages:
       - label: French
         details: Native
       - label: English
         details: Professional working proficiency
 
-    awards:
+    Awards:
       - name: Simulia Regional User Meeting Academic Award
         date: 2018-10
         location: France
