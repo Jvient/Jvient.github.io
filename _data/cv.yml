@@ -1,189 +1,106 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  name: Jean-Marie Vient
+  location: Brest, Bretagne, France
+  email: jean-marie.vient@shom.fr
+  website: https://jvient.github.io
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: jeanmarievient
+    - network: GitHub
+      username: Jvient
+    - network: ORCID
+      username: 0000-0002-4095-3274
 
   sections:
-    Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+    summary:
+      - PhD in AI & oceanographic data processing. Geoscience engineer with a strong expertise in the application of machine learning and data assimilation to ocean remote sensing and hydrodynamic modeling.
+
+    experience:
+      - company: SHOM (Service Hydrographique et Océanographique de la Marine)
+        position: Data Scientist for Oceanographic Analysis
+        location: Brest, France
+        start_date: 2025-04
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
+          - Innovation Lab Agent at SHOM, collaborating with operational departments to design and deliver projects combining oceanography and artificial intelligence.
+          - Development of oceanographic products, use cases and proof-of-concepts (PoCs) based on the exploitation of physical oceanography data and in-situ / satellite observations.
+          - Design of AI-driven methods for the analysis, reconstruction and forecasting of ocean variables (turbidity, surface dynamics, water masses), in support of SHOM's hydrographic and oceanographic missions.
+          - Scientific and technical expertise on AI applied to oceanography, including collaborations with academic partners (IMT Atlantic, IUEM, Ifremer).
+          - Contribution to SHOM's scientific and operational outreach in AI-driven oceanography (publications, conferences, internal training).
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - company: SHOM (Service Hydrographique et Océanographique de la Marine)
+        position: Data & AI Architect Engineer
+        location: Brest, France
+        start_date: 2023-02
+        end_date: 2025-04
         highlights:
-          - Description 1.
-          - Description 2.
+          - Support to business teams in the design and deployment of operational and exploratory Data / AI processes.
+          - Implementation of technical architectures and DevOps/MLOps pipelines on bare-metal servers (Kubernetes HA, Spark, MinIO, GPU infrastructure).
+          - Contribution to SHOM's IT system modernization and drafting of technical specifications (CCTP).
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Université de Bretagne Occidentale — IUEM / IMT Atlantic / SHOM
+        position: PhD Student in Ocean Data Science
+        location: Brest, France
+        start_date: 2019-10
+        end_date: 2022-12
         highlights:
-          - Relativity
-          - Description 2.
+          - PhD thesis "Assimilation of the spatio-temporal dynamics of turbidity through synergy between ocean colour satellite measurements and hydrodynamic simulations".
+          - Development of deep learning architectures (end-to-end neural interpolation, data-driven assimilation) to reconstruct sea surface suspended sediment concentrations from partial satellite observations.
+          - Coupling of ocean colour remote sensing products with hydrodynamic-sedimentary model outputs (MARS3D) to improve the spatio-temporal coverage of turbidity fields in coastal environments.
+          - Two first-author peer-reviewed articles published in Remote Sensing (MDPI, 2021 & 2022).
+          - Thesis directed by Christophe Delacourt (IUEM) and Ronan Fablet (IMT Atlantic), supervised by Frédéric Jourdin (SHOM).
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: SHOM
+        position: Research Intern — End of studies internship
+        location: Brest, France
+        start_date: 2019-01
+        end_date: 2019-07
         highlights:
-          - Description 1.
-          - Description 2.
+          - Learning methods for ocean transparency prediction, in partnership with IMT Atlantic.
+          - Processing of hydrosedimentary model outputs to design and benchmark algorithmic methods for water transparency prediction.
+          - Application of data assimilation methods to coastal turbidity data.
+          - Participation to the SHOM hydrographic vessel campaign MEPELS (at-sea expertise and sampling).
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+    education:
+      - institution: Université de Bretagne Occidentale (IUEM) — IMT Atlantic — SHOM
+        area: Ocean Data Science / Artificial Intelligence applied to Oceanography
+        degree: PhD
+        start_date: 2019
+        end_date: 2022
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Thesis defended in December 2022.
+          - Focus on deep learning, data assimilation, ocean colour remote sensing and hydrodynamic modeling.
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - institution: UniLaSalle
+        area: Geology and Environment — Energy Resources
+        degree: Engineering Degree (Diplôme d'ingénieur)
+        start_date: 2014
+        end_date: 2019
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Specialization in energy resources, reservoir modeling, remote sensing and GIS.
+          - Core curriculum - petroleum geology and evaluation, sedimentology, remote sensing, reservoir modeling, GIS, project management.
+          - Personal development - numerical simulation, modeling, digital tools, biomimicry.
+          - Winner of the Simulia Regional User Meeting Academic Award (October 2018) for a numerical simulation project on the nest of Torquigener albomaculosus, applied to coastal protection and submarine cable bioengineering.
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    skills:
+      - label: Programming
+        details: Python (PyTorch, TensorFlow, NumPy, Xarray, Pandas), Bash, SQL
+      - label: Machine Learning / AI
+        details: Deep learning, neural interpolation, data assimilation, variational methods, representation learning
+      - label: Oceanography & Remote Sensing
+        details: Ocean colour, turbidity / SPM, hydrodynamic-sedimentary modeling (MARS3D), satellite observations (MODIS, Sentinel)
+      - label: Data & MLOps
+        details: Kubernetes (HA), Rancher, Ansible, Spark, MinIO, Jupyter, GPU infrastructure
+      - label: Geosciences
+        details: GIS, reservoir modeling, sedimentology, remote sensing
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    languages:
+      - language: French
+        fluency: Native
+      - language: English
+        fluency: Professional working proficiency
+
+    awards:
+      - name: Simulia Regional User Meeting Academic Award
+        date: 2018-10
+        summary: First prize for a numerical simulation project on biomimicry (Torquigener albomaculosus nest), applied to coastal protection.
