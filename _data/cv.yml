@@ -19,9 +19,8 @@ cv:
       - company: SHOM — Service Hydrographique et Océanographique de la Marine
         position: Data Scientist for Oceanographic Analysis
         location: Brest, France
-        date:
-          start_date: 2025-04
-          end_date: present
+        start_date: 2025-04
+        end_date: present
         highlights:
           - Innovation Lab Agent at SHOM, collaborating with operational departments to design and deliver projects combining oceanography and artificial intelligence.
           - Development of oceanographic products, use cases and proof-of-concepts based on the exploitation of physical oceanography data and in-situ / satellite observations.
@@ -31,9 +30,8 @@ cv:
       - company: SHOM — Service Hydrographique et Océanographique de la Marine
         position: Data & AI Architect Engineer
         location: Brest, France
-        date:
-          start_date: 2023-02
-          end_date: 2025-04
+        start_date: 2023-02
+        end_date: 2025-04
         highlights:
           - Support to business teams in the design and deployment of operational and exploratory Data / AI processes.
           - Implementation of technical architectures and DevOps/MLOps pipelines on bare-metal servers (Kubernetes HA, Spark, MinIO, GPU).
@@ -42,9 +40,8 @@ cv:
       - company: Université de Bretagne Occidentale — IUEM / IMT Atlantic / SHOM
         position: PhD Student in Ocean Data Science
         location: Brest, France
-        date:
-          start_date: 2019-10
-          end_date: 2022-12
+        start_date: 2019-10
+        end_date: 2022-12
         highlights:
           - PhD thesis "Assimilation of the spatio-temporal dynamics of turbidity through synergy between ocean colour satellite measurements and hydrodynamic simulations".
           - Development of deep learning architectures (end-to-end neural interpolation, data-driven assimilation) to reconstruct sea surface suspended sediment concentrations from partial satellite observations.
@@ -55,9 +52,8 @@ cv:
       - company: SHOM
         position: Research Intern
         location: Brest, France
-        date:
-          start_date: 2019-01
-          end_date: 2019-07
+        start_date: 2019-01
+        end_date: 2019-07
         highlights:
           - End of studies internship in partnership with IMT Atlantic, on learning methods for ocean transparency prediction.
           - Processing of hydrosedimentary model outputs and application of data assimilation methods to coastal turbidity data.
@@ -68,9 +64,8 @@ cv:
         area: Ocean Data Science — AI applied to Oceanography
         degree: PhD
         location: Brest, France
-        date:
-          start_date: 2019-10
-          end_date: 2022-12
+        start_date: 2019-10
+        end_date: 2022-12
         highlights:
           - Thesis defended in December 2022.
           - Focus on deep learning, data assimilation, ocean colour remote sensing and hydrodynamic modeling.
@@ -79,9 +74,8 @@ cv:
         area: Geology and Environment — Energy Resources
         degree: Engineering Degree
         location: France
-        date:
-          start_date: 2014-09
-          end_date: 2019-06
+        start_date: 2014-09
+        end_date: 2019-06
         highlights:
           - Specialization in energy resources, reservoir modeling, remote sensing and GIS.
           - Winner of the Simulia Regional User Meeting Academic Award (2018).
@@ -99,9 +93,9 @@ cv:
         details: GIS, reservoir modeling, sedimentology, remote sensing
 
     languages:
-      - name: French
+      - label: French
         details: Native
-      - name: English
+      - label: English
         details: Professional working proficiency
 
     awards:
