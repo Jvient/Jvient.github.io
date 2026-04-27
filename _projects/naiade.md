@@ -16,12 +16,26 @@ NAIADE is a Python framework dedicated to the application of deep learning and d
 - Modular components for neural interpolation and data-driven assimilation of geophysical variables.
 - Support for satellite-derived products (ocean colour, SST, altimetry) and model outputs.
   
-!(/assets/img/gnn_network_analysis.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/ae_network_evaluation.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    AE evaluation with generated buoy nbetwork.
+</div>
 
 - Flexible training pipelines, with utilities for handling spatio-temporal datasets, missing data masks and physical constraints.
 - Designed for both research experimentation and integration into operational oceanography workflows.
   
-!(/assets/img/ae_network_evaluation.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/gnn_network_analysis.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    GNN evaluation with buoy networks.
+</div>
 
 ## Context
 
