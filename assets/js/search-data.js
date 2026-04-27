@@ -410,6 +410,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
+            },},{id: "projects-4dvarnet-for-coastal-turbidity",
+          title: '4DVarNet for Coastal Turbidity',
+          description: "End-to-end neural assimilation of ocean colour observations for sea surface suspended sediments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4dvarnet-turbidity/";
             },},{id: "projects-naiade",
           title: 'NAIADE',
           description: "Neural Architecture for Inference and Assimilation of Dynamic Environments",
