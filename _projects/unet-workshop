@@ -2,7 +2,7 @@
 layout: page
 title: U-Net ML Workshop
 description: Hands-on workshop on deep learning for sea surface temperature reconstruction
-img: assets/img/unet_workshop.jpg
+img: assets/img/unet_workshop.png
 importance: 2
 category: development
 github: https://github.com/Jvient/U-Net_ML_Workshop
