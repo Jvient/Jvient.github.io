@@ -2,7 +2,7 @@
 layout: page
 title: 4DVarNet for Coastal Turbidity
 description: End-to-end neural assimilation of ocean colour observations for sea surface suspended sediments
-img: assets/img/4dvarnet.jpg
+img: assets/img/image3.gif
 importance: 1
 category: research
 related_publications: true
@@ -19,11 +19,27 @@ Ocean colour remote sensing provides invaluable information on coastal water pro
 
 This project explores how deep learning can act as a bridge between observations and models, learning data-driven representations of the underlying dynamics and reconstructing missing information from sparse satellite measurements.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/model.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  
+</div>
+
 ## Main contributions
 
 - Development of **data-driven interpolation schemes** for sea surface SSC derived from ocean colour observations.
 - Design of **end-to-end neural interpolation architectures** that jointly learn the dynamical prior and the inversion operator from data.
 - Coupling of neural reconstructions with hydrodynamic-sedimentary model outputs to improve spatio-temporal coverage of turbidity fields in coastal environments.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/4dvarnaiade.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+</div>
 
 ## Associated publications & thesis
 
