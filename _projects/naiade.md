@@ -9,11 +9,11 @@ related_publications: false
 github: https://github.com/Jvient/naiade
 ---
 
-**NAIADE** is an open-source Python library designed to help oceanographers and Earth scientists apply modern **artificial intelligence** methods — particularly **deep learning** and **data assimilation** — to their data, without needing to be specialists in machine learning.
+**NAIADE** is an open-source Python library designed to help oceanographers and Earth scientists apply modern **artificial intelligence** methods particularly **deep learning** and **data assimilation** to their data, without needing to be specialists in machine learning.
 
 ## Why NAIADE?
 
-Working with ocean data is challenging: satellite observations are often **incomplete** (clouds, swaths, revisit gaps), in-situ measurements are **sparse**, and physical models — while powerful — depend on uncertain forcings and parameterizations. Reconstructing continuous, physically consistent fields from this fragmented information is a recurrent problem in oceanography.
+Working with ocean data is challenging: satellite observations are often **incomplete** (clouds, swaths, revisit gaps), in-situ measurements are **sparse**, and physical models depend on uncertain forcings and parameterizations. Reconstructing continuous, physically consistent fields from this fragmented information is a recurrent problem in oceanography.
 
 Modern AI offers powerful tools to address this challenge. **Neural networks** can learn complex patterns from large datasets, while **data assimilation** combines observations and model knowledge in a rigorous way. NAIADE provides a unified framework that brings these two worlds together, with a focus on real-world oceanographic applications.
 
