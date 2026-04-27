@@ -2,7 +2,7 @@
 layout: page
 title: NAIADE
 description: Neural Architecture for Inference and Assimilation of Dynamic Environments
-img: assets/img/naiade.jpg
+img: assets/img/rl_progression.gif
 importance: 1
 category: development
 related_publications: false
@@ -21,6 +21,15 @@ NAIADE is a Python framework dedicated to the application of deep learning and d
 ## Context
 
 NAIADE is developed in the context of ocean data science research, with a focus on coastal and shelf-sea applications such as turbidity, suspended sediments and surface dynamics. The library aims to bridge methodological advances in machine learning with the operational needs of physical oceanography.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/rl_progression.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    NAIADE in action — neural reconstruction of partial satellite observations.
+</div>
 
 ## Links
 
