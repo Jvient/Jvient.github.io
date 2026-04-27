@@ -1,0 +1,27 @@
+---
+layout: page
+title: NAIADE
+description: Neural Architecture for Inference and Assimilation of Dynamic Environments
+img: assets/img/naiade.jpg
+importance: 1
+category: development
+related_publications: false
+github: https://github.com/Jvient/naiade
+---
+
+NAIADE is a Python framework dedicated to the application of deep learning and data assimilation methods to oceanographic data. It provides modular building blocks to develop, train and evaluate neural architectures for the reconstruction, interpolation and forecasting of geophysical fields from partial and noisy observations.
+
+## Main features
+
+- Modular components for neural interpolation and data-driven assimilation of geophysical variables.
+- Support for satellite-derived products (ocean colour, SST, altimetry) and model outputs.
+- Flexible training pipelines, with utilities for handling spatio-temporal datasets, missing data masks and physical constraints.
+- Designed for both research experimentation and integration into operational oceanography workflows.
+
+## Context
+
+NAIADE is developed in the context of ocean data science research, with a focus on coastal and shelf-sea applications such as turbidity, suspended sediments and surface dynamics. The library aims to bridge methodological advances in machine learning with the operational needs of physical oceanography.
+
+## Links
+
+- GitHub repository: [Jvient/naiade](https://github.com/Jvient/naiade)
