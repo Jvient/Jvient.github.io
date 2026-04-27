@@ -20,6 +20,7 @@ NAIADE is a Python framework dedicated to the application of deep learning and d
 
 - Flexible training pipelines, with utilities for handling spatio-temporal datasets, missing data masks and physical constraints.
 - Designed for both research experimentation and integration into operational oceanography workflows.
+  
 !(/assets/img/ae_network_evaluation.png)
 
 ## Context
