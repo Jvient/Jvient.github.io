@@ -405,11 +405,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
             },},{id: "news-new-personal-website-launched-you-can-now-find-here-my-publications-projects-and-cv-including-the-open-source-library-naiade-and-a-hands-on-u-net-workshop-for-ocean-data-science",
           title: 'New personal website launched! You can now find here my publications, projects and...',
           description: "",
