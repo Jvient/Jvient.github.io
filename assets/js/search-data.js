@@ -420,6 +420,11 @@ ninja.data = [{
           description: "Neural Architecture for Inference and Assimilation of Dynamic Environments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/naiade/";
+            },},{id: "projects-u-net-ml-workshop",
+          title: 'U-Net ML Workshop',
+          description: "Hands-on workshop on deep learning for sea surface temperature reconstruction",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/unet-workshop/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
