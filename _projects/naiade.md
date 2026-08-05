@@ -8,63 +8,71 @@ category: development
 related_publications: false
 github: https://github.com/Jvient/naiade
 ---
+**NAIADE** (*Network AI for Adaptive Design of Experiments*) is an open-source Python framework exploring how modern **artificial intelligence** can help design and optimize **oceanographic observation networks**. Given a large ocean area to monitor with a limited number of instruments, the central question becomes: *where should we place them, and how many are enough?*
 
-**NAIADE** (*Network AI for Adaptive Design of Experiments*) is an open-source Python framework exploring how modern **artificial intelligence** can help design and optimize **oceanographic observation networks**. In other words: given a large ocean area to monitor with a limited number of instruments, *where should we place them?*
+## The scientific question
 
-## The question NAIADE tries to answer
-
-Ocean observations — from moored buoys to autonomous platforms — are expensive to deploy and maintain, and can only cover a tiny fraction of the ocean at any given time. A recurrent scientific and operational question is therefore:
+Ocean observations are expensive to deploy and maintain, and can only sample a tiny fraction of the ocean at any given time. This turns network design into a classical **Optimal Experimental Design (OED)** problem: choosing the sensor configuration that maximizes the information collected about the system state, under budget constraints.
 
 > Given the physical dynamics of a region and a limited number of sensors, **which configuration will bring us the most information about the ocean state?**
 
-This kind of problem is known as **Optimal Experimental Design (OED)**. NAIADE approaches it with three complementary AI methods, working on the same synthetic ocean and the same initial network of sensors, so their results can be compared and combined.
+NAIADE addresses this problem with three complementary AI paradigms — **generative reconstruction**, **graph representation learning** and **reinforcement learning** — applied to the same synthetic ocean and the same initial network, so their outputs can be cross-analyzed and combined.
 
 ## Three complementary AI modules
 
-NAIADE is organized around three modules, each answering a different facet of the OED question. They can be run **independently** or chained together in a **full pipeline**.
+Each module targets a different facet of the OED question. They can be run **independently** or chained together in a **full pipeline** (RL → GNN → AE).
 
-### 1 — Reconstructing the ocean from sparse observations (Autoencoder + Uncertainty)
+### 1 — Field reconstruction & uncertainty quantification (AE-UNet + MC-Dropout)
 
-The first module trains a **neural network (an AE-UNet with MC-Dropout)** to reconstruct 2D fields of **Sea Surface Temperature (SST)** and **Sea Surface Salinity (SSS)** from a handful of sensor measurements. In practice, the network learns what the full ocean field "typically looks like" from many training examples, and can then fill in the blanks when only a few sensors are available.
+The first module trains an **Autoencoder built on a U-Net backbone** to reconstruct 2D fields of **Sea Surface Temperature (SST)** and **Sea Surface Salinity (SSS)** from sparse sensor measurements. The training objective combines a **Huber reconstruction loss** with a **spatial-gradient regularization**, a **loss weighting on unobserved pixels** and **FiLM conditioning** on the observation mask.
 
-Because the network is stochastic, it also provides an **uncertainty map**: areas where the reconstruction is confident, and areas where it is not — the latter being natural candidates for adding new sensors. Combined with a **Leave-One-Out score** (removing one sensor at a time), this tells us how much each sensor really contributes to the reconstruction, and where the network of observations has meaningful gaps.
+Epistemic uncertainty is quantified via **Monte-Carlo Dropout**: at inference, dropout layers remain active and multiple stochastic forward passes are aggregated to produce a mean reconstruction and a per-pixel standard-deviation map. This turns the network into a proxy for a Bayesian posterior over field reconstructions.
 
-### 2 — Understanding the structure of a sensor network (Graph Neural Networks)
+On top of this, NAIADE computes **Leave-One-Out (LOO) scores** per sensor — quantifying each sensor's marginal contribution to the reconstruction — and identifies **D-optimal buoy candidates** from the uncertainty maps, i.e. regions where adding a sensor would most reduce reconstruction variance.
 
-The second module represents the observation network as a **graph**, where each sensor is a node and edges connect sensors whose measurements are correlated in time and space. A **Graph Attention Network (GAT)** and a **GraphSAGE** model then analyze this graph.
+### 2 — Graph representation & inductive evaluation (GAT + GraphSAGE)
 
-The result is a much clearer picture of the network's structure: which sensors bring unique information, which ones are partly redundant, which regions are poorly covered. The GraphSAGE model is also **inductive**, meaning it can evaluate **hypothetical sensors** at new positions without retraining — a useful tool when planning a network extension.
+The second module represents the observation network as a **graph**, where each sensor is a node and edges are built from **temporal correlations** (above a configurable threshold) combined with **k-nearest-neighbor spatial connectivity**. Two graph neural networks are trained on this representation:
 
-### 3 — Optimizing sensor placement (Reinforcement Learning)
+- A **Graph Attention Network (GAT)** learns attention weights over neighbors, providing an interpretable measure of which connections matter most for encoding the network state.
+- A **GraphSAGE** model provides **inductive** embeddings, meaning it generalizes to **hypothetical sensors** at unseen positions without retraining — a key property when planning a network extension.
 
-The third module treats sensor placement as a **decision problem**: an agent progressively chooses positions on a candidate grid, receives a reward based on the information gathered, and pays a cost for each active sensor. This agent is trained with **Reinforcement Learning (PPO)** and progressively learns placement strategies that balance **information gain** and **network size**.
+The module produces network-level diagnostics: sensor **contribution**, **redundancy** with neighbors, **coverage** maps, and **inductive scores** for candidate sensor positions provided by the user.
 
-The output is not a single configuration, but a **Pareto front** of trade-offs between the number of sensors and the information they provide, together with several methods (Kneedle elbow, efficiency criterion, scalarized reward) to identify a reasonable "optimal N*". NAIADE can also compare a **dense** configuration (N*) with a **lighter** one (N*/2), which is often the most operationally relevant question.
+### 3 — Sensor placement optimization (PPO on a candidate grid)
+
+The third module casts sensor placement as a **sequential decision problem** solved by **Reinforcement Learning**. A **Proximal Policy Optimization (PPO)** agent operates on a discretized candidate grid, choosing at each step which position to activate or deactivate. The reward combines an **information gain** term (linked to the AE reconstruction error under the current configuration) and a **budget penalty** term (per active sensor).
+
+The evaluation produces a **Pareto front** of information versus network size, and NAIADE offers three complementary methods to pick an "optimal N*":
+
+- **`pareto`**: information-vs-N sweep with policy and random baselines, Kneedle elbow detection on the front.
+- **`efficiency`**: maximization of η(N) = info(N) / (1 + log N), with a soft log-penalty on network size.
+- **`scalarized`**: multiple PPO trainings with increasing λ (marginal cost per sensor), best run selected by η.
+
+The optimized **N*** configuration is systematically compared to a **light** configuration (**N*/2**), which often represents the most operationally relevant question in observation network planning.
 
 ## From modules to a full pipeline
 
-The three modules can be combined in a natural workflow:
+The three modules are designed to work together. In `pipeline` mode:
 
-1. **RL** proposes an optimized sensor configuration.
-2. **GNN** analyzes this configuration to characterize redundancies and gaps.
-3. **Autoencoder** evaluates how well this configuration reconstructs the ocean fields, with quantified uncertainty.
+1. **RL** proposes an optimized configuration on the candidate grid.
+2. **GNN** analyzes this configuration to characterize redundancy, coverage and inductive value.
+3. **AE** evaluates reconstruction quality on the optimized network and quantifies residual uncertainty.
 
-All modules share the same **synthetic ocean nature run** — a 2D+T simulation with realistic physical structures (double gyre, meandering zonal front, mesoscale eddies, seasonal cycle, spectral turbulence, and an SSS field coupled to SST) — and the same **seed control**, so that experiments are fully reproducible.
+All modules share the same **nature run** — a 2D+T synthetic simulation with realistic physical structures (double gyre, meandering zonal front, mesoscale eddies, seasonal cycle, k⁻³ spectral turbulence, SSS coupled to SST) — and the same **global seed control** (numpy, PyTorch CPU/GPU, deterministic cuDNN), so that experiments are fully reproducible.
 
 ## Why it matters
 
-The methodology is deliberately generic. Although NAIADE is currently demonstrated on synthetic SST/SSS fields, the same tools can be applied to a wide range of ocean and Earth observation problems where the central question is *"where and how many sensors should we deploy?"* — from coastal networks to open-ocean monitoring, from physical to biogeochemical variables.
+Although NAIADE is currently demonstrated on synthetic SST/SSS fields, the underlying methodology is generic. The same AE + GNN + RL stack can be applied to a wide range of ocean and Earth observation problems where the central question is *"where and how many sensors should we deploy?"* — from coastal networks to open-ocean monitoring, from physical to biogeochemical variables.
 
-NAIADE is intended as a **research and prototyping playground**: a place to experiment with AI-driven observation design in a reproducible, modular and physically-aware way, without having to reimplement everything from scratch.
+NAIADE is intended as a **research and prototyping playground**: a modular, reproducible and physics-aware environment to experiment with AI-driven observation design, without having to reimplement each component from scratch.
 
 ## Under the hood
 
-For those interested in the technical stack:
-
-- **Language & frameworks**: Python, PyTorch, NumPy, SciPy, Matplotlib, optionally PyTorch Geometric.
-- **Data**: fully synthetic ocean generator (`dataset.py`) — no external dataset needed to get started.
-- **Structure**: shared configuration (`config.py`), three standalone module scripts (`01_autoencoder.py`, `02_gnn.py`, `03_rl.py`), and an orchestrator (`run_demo.py`) for the full pipeline.
-- **Outputs**: timestamped folders with checkpoints, diagnostic figures, animated GIFs of the RL agent learning, and text reports.
+- **Language & frameworks**: Python, PyTorch, NumPy, SciPy, Matplotlib; optionally PyTorch Geometric for native `GATConv` / `SAGEConv` (with a manual fallback otherwise).
+- **Data**: fully synthetic ocean generator (`dataset.py`) — no external dataset required.
+- **Structure**: shared configuration and seed control (`config.py`), three standalone module scripts (`01_autoencoder.py`, `02_gnn.py`, `03_rl.py`), and an orchestrator (`run_demo.py`) supporting both `individual` and `pipeline` modes.
+- **Outputs**: timestamped folders with checkpoints (`ae_best.pt`, `gnn_best.pt`, `sage_best.pt`, `rl_best.pt`), diagnostic figures, animated GIFs of the RL progression, and text reports (`rapport_pipeline_*.txt`).
 
 A minimal run looks like:
 
@@ -72,7 +80,7 @@ A minimal run looks like:
 # Full pipeline (RL → GNN → AE) with demo parameters
 python run_demo.py --mode pipeline
 
-# Or individual modules
+# Independent modules
 python run_demo.py --mode individual
 ```
 
