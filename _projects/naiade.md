@@ -22,7 +22,7 @@ To ensure reproducibility and control, NAIADE runs on a **synthetic 2D+T nature 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/ocean_nature_run.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ocean_nature_run.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -43,7 +43,7 @@ On top of this, NAIADE computes **Leave-One-Out (LOO) scores** per sensor and id
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/ae_network_evaluation.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ae_network_evaluation.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -61,7 +61,7 @@ The module produces network-level diagnostics: sensor **contribution**, **redund
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/gnn_network_analysis.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/gnn_network_analysis.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -74,7 +74,7 @@ The third module casts sensor placement as a **sequential decision problem** sol
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/rl_progression.gif" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_progression.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -89,7 +89,7 @@ The evaluation produces a **Pareto front** of information versus network size, a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/rl_pareto_front.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_pareto_front.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -100,7 +100,7 @@ The optimized **N*** configuration is systematically compared to a **light** con
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/naiade/rl_two_configs.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rl_two_configs.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
